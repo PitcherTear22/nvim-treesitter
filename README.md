@@ -91,7 +91,7 @@ require'nvim-treesitter.configs'.setup {
 EOF
 ```
 
-Check [`:h nvim-treesitter-modules`](doc/nvim-treesitter.txt#51)
+Check [`:h nvim-treesitter-modules`](https://github.com/nvim-treesitter/nvim-treesitter/blob/ac13baadb66160e7cd863c42d6986609984c075c/doc/nvim-treesitter.txt#L51)
 for a list of available modules and its options.
 
 # Available Modules
@@ -419,7 +419,7 @@ You can get some utility functions with
 local ts_utils = require 'nvim-treesitter.ts_utils'
 ```
 
-Check [`:h nvim-treesitter-utils`](doc/nvim-treesitter.txt#471) for more information.
+Check [`:h nvim-treesitter-utils`](https://github.com/nvim-treesitter/nvim-treesitter/blob/ac13baadb66160e7cd863c42d6986609984c075c/doc/nvim-treesitter.txt#L470) for more information.
 
 # User Query Extensions
 
