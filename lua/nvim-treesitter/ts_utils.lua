@@ -130,6 +130,20 @@ function M.highlight_range(range, buf, hl_namespace, hl_group)
   vim.highlight.range(buf, hl_namespace, hl_group, {start_row, start_col}, {end_row, end_col})
 end
 
+function M.node_sign_column(node, buf)
+  if not node then return end
+  M.range_sign_column({node:range()}, buf)
+end
+
+vim.fn.sign_define('ts_scope', { text = '|' })
+
+function M.range_sign_column(range, buf)
+  local start_row, start_col, end_row, end_col = unpack(range)
+  for i = start_col, end_col do
+    vim.fn.sign_place(0, '', 'ts_scope', buf, { lnum = i })
+  end
+end
+
 -- Set visual selection to node
 function M.update_selection(buf, node)
   local start_row, start_col, end_row, end_col = M.get_node_range(node)
